@@ -1,0 +1,217 @@
+/* ── App layout ── */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #1a7f37;
+  color: #fff;
+  text-align: center;
+  padding: 32px 20px 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.app-main {
+  flex: 1;
+  padding: 32px 20px;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.app-footer {
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.app-footer a {
+  color: #1a7f37;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Order form ── */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-form h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1a7f37;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label,
+.form-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.optional {
+  font-weight: 400;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1a7f37;
+  box-shadow: 0 0 0 2px rgba(26, 127, 55, 0.2);
+}
+
+.form-group input[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.form-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.form-error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #b42318;
+}
+
+.form-success {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #1a7f37;
+}
+
+/* ── Includes list ── */
+.includes-list {
+  background: #f6fef9;
+  border: 1px solid #bbf0cc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.includes-label {
+  font-weight: 600;
+  color: #1a7f37;
+}
+
+.includes-list ul {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+}
+
+.includes-list li {
+  margin-bottom: 2px;
+}
+
+/* ── Side options ── */
+.side-options {
+  display: flex;
+  gap: 16px;
+}
+
+.side-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.side-option input[type="radio"] {
+  accent-color: #1a7f37;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* ── WhatsApp button ── */
+.wsp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #25D366;
+  color: #111;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.wsp-btn:hover {
+  background: #1ebe5a;
+}
+
+.wsp-btn--disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.wsp-btn__icon {
+  font-size: 1.2rem;
+}
+
+.wsp-btn__number {
+  font-weight: 400;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ── Order action area ── */
+.order-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
