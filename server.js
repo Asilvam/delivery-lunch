@@ -1,5 +1,6 @@
 // @ts-check
 import express from "express";
+import rateLimit from "express-rate-limit";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -10,6 +11,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const distDir = join(__dirname, "dist");
+
+// Basic rate limiting to protect static file serving
+const limiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 200,            // max requests per IP per window
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use(limiter);
 
 // Serve static files from the dist directory
 app.use(express.static(distDir));
